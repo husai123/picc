@@ -12,6 +12,7 @@
         <module>insurance-eureka</module>
         <module>insurance-gateway</module>
         <module>insurance-commom</module>
+        <module>insurance_customer</module>
     </modules>
 
 

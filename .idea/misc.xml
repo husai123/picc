@@ -9,13 +9,13 @@
     </option>
   </component>
   <component name="ProjectResources">
-    <resource url="http://mybatis.org/dtd/mybatis-3-config.dtd" location="D:/Y2/mybatis/dtd/mybatis-3-config.dtd" />
-    <resource url="http://mybatis.org/dtd/mybatis-3-mapper.dtd" location="D:/Y2/mybatis/dtd/mybatis-3-mapper.dtd" />
-    <resource url="http://www.springframework.org/schema/aop" location="D:/Y2/spring/schema/spring-aop-4.2.xsd" />
-    <resource url="http://www.springframework.org/schema/beans" location="D:/Y2/spring/schema/spring-beans-4.2.xsd" />
-    <resource url="http://www.springframework.org/schema/context" location="D:/Y2/spring/schema/spring-context-4.2.xsd" />
-    <resource url="http://www.springframework.org/schema/mvc" location="D:/Y2/spring/schema/spring-mvc-4.2.xsd" />
-    <resource url="http://www.springframework.org/schema/tx" location="D:/Y2/spring/schema/spring-tx-4.2.xsd" />
+    <resource url="http://mybatis.org/dtd/mybatis-3-config.dtd" location="D:/software/program/dtd/mybatis-3-config.dtd" />
+    <resource url="http://mybatis.org/dtd/mybatis-3-mapper.dtd" location="D:/software/program/dtd/mybatis-3-mapper.dtd" />
+    <resource url="http://www.springframework.org/schema/aop" location="D:/software/program/dtd/schema/spring-aop-4.2.xsd" />
+    <resource url="http://www.springframework.org/schema/beans" location="D:/software/program/dtd/schema/spring-beans-4.2.xsd" />
+    <resource url="http://www.springframework.org/schema/context" location="D:/software/program/dtd/schema/spring-context-4.2.xsd" />
+    <resource url="http://www.springframework.org/schema/mvc" location="D:/software/program/dtd/schema/spring-mvc-4.2.xsd" />
+    <resource url="http://www.springframework.org/schema/tx" location="D:/software/program/dtd/schema/spring-tx-4.2.xsd" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
