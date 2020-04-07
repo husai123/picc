@@ -11,6 +11,6 @@
 
     <groupId>org.java.insurance</groupId>
     <artifactId>insurance-login-interface</artifactId>
-
+     <dependencies></dependencies>
 
 </project>

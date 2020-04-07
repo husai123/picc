@@ -22,6 +22,7 @@ public class GlobalCorsConfig {
         //1) 允许的域,不要写*，否则cookie就无法使用了-------------在此处，配置允许跨域的请求
         config.addAllowedOrigin("http://api.insurance.com");
         config.addAllowedOrigin("http://www.insurance.com");
+        config.addAllowedHeader("http://insurance.backstage.com");
 
         //2) 是否发送Cookie信息
         config.setAllowCredentials(true);  //该配置表示， 允许跨域时，传递cookie
