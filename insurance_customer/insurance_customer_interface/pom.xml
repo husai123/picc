@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>org.java.customer</groupId>
     <artifactId>insurance_customer_interface</artifactId>
 
 

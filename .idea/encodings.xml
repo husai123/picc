@@ -6,12 +6,11 @@
     <file url="file://$PROJECT_DIR$/insurance-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-login" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance-login" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-login/insurance-login-interface" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance-login/insurance-login-interface" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance-login/insurance-login-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-login/insurance-login-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_auth/insurance_auth_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_auth/insurance_auth_service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_customer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_customer/insurance_customer_interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_customer/insurance_customer_service" charset="UTF-8" />
