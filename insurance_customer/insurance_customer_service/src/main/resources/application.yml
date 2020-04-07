@@ -9,7 +9,8 @@ spring:
     username: root
     password: 111111
     type: com.alibaba.druid.pool.DruidDataSource
-
+mybatis:
+  mapper-locations: mapper/*Mapper.xml
 eureka:
   client:
     service-url:

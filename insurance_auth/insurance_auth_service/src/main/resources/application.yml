@@ -6,7 +6,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://127.0.0.1:8762/eureka
   instance:
     lease-renewal-interval-in-seconds: 5 #心跳续约时间
     lease-expiration-duration-in-seconds: 15 #剔除服务时间
@@ -15,7 +15,7 @@ eureka:
 shopping:
   jwt:
     secret: maguojwtlogin # 登录校验的密钥---------通过成公钥、私钥时，混合的数据
-    pubKeyPath: C:\\tmp\\rsa\\rsa.pub # 公钥地址
-    priKeyPath: C:\\tmp\\rsa\\rsa.pri # 私钥地址
+    pubKeyPath: D:\\insurance_project\\tmp\\rsa.pub # 公钥地址
+    priKeyPath: D:\\insurance_project\\tmp\\rsa.pri # 私钥地址
     expire: 30 # 过期时间,单位分钟
     cookieName: insurance-token #cookie的名称

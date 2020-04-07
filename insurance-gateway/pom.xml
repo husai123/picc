@@ -25,6 +25,26 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
+
+        <!--导入shopping-common的依赖-->
+        <dependency>
+            <groupId>org.java.common</groupId>
+            <artifactId>insurance-commom</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--导入shopping-auth-common依赖-->
+        <dependency>
+            <groupId>org.java.auth</groupId>
+            <artifactId>insurance_auth_common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--去掉警告-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-configuration-processor</artifactId>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
     </dependencies>
 
 
