@@ -13,11 +13,11 @@ eureka:
     lease-renewal-interval-in-seconds: 5   #每一个服务多久向eureka发送一次心跳：5s （开发环境可以改，生产环境不要改
 
 zuul:
-    routes:
-      customer-service: #用户中心
-        path: /customer/**
-        serviceId: customer-service
-        strip-prefix: false #如果网关中的前缀与控制器的映射路径相同，只需要写一次
+  routes:
+    customer-service: #用户中心
+      path: /customer/**
+      serviceId: customer-service
+      strip-prefix: false #如果网关中的前缀与控制器的映射路径相同，只需要写一次
   prefix: /api  #所有经过网关的请求，加上前缀
 
   #http://api.shopping.com/api/upload/img
