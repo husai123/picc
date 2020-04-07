@@ -13,7 +13,6 @@
         <module>insurance-gateway</module>
         <module>insurance-commom</module>
         <module>insurance_customer</module>
-        <module>insurance-login</module>
     </modules>
 
 

@@ -29,9 +29,9 @@ public class CustomerServiceImpl implements CustomerService {
         Customer recode=new Customer();
 
         if(type==1){
-            recode.setCUST_EMAIL(data);//按email查询
+            recode.setCust_email(data);//按email查询
         }else if(type==2){
-            recode.setCUST_PHONE(data);//按phone查询
+            recode.setCust_phone(data);//按phone查询
         }else{
             //数据格式有误
             return null;
@@ -62,13 +62,13 @@ public class CustomerServiceImpl implements CustomerService {
     public Boolean registerUser(Customer customer) {
 
         //设置用户编号
-        customer.setCUST_ID(UUID.randomUUID().toString());
+        customer.setCust_id(UUID.randomUUID().toString());
 
         //得到盐----------我们可以采用一个工具类生成盐
         String salt = CodecUtils.generateSalt();
 
         //对用户输入的密码进行MD5加密
-        customer.setCUST_PASSWORD(CodecUtils.md5Hex(customer.getCUST_PASSWORD(),salt));
+        customer.setCust_password(CodecUtils.md5Hex(customer.getCust_password(),salt));
 
         //将盐设置到user中
         customer.setSalt(salt);
@@ -90,9 +90,9 @@ public class CustomerServiceImpl implements CustomerService {
         Customer recode = new Customer();
         //根据查询条件查询对象,有@符号就查邮箱，没有就查电话号码
         if(date.indexOf("@")!=-1){
-            recode.setCUST_EMAIL(date);
+            recode.setCust_email(date);
         }else{
-            recode.setCUST_PHONE(date);
+            recode.setCust_phone(date);
         }
 
         Customer customer = customerMapper.selectOne(recode);
@@ -107,7 +107,7 @@ public class CustomerServiceImpl implements CustomerService {
 
         //比较用户输入的密码与数据库查询出来的密码是否一致
         //比较密码是否一致(对用户输入的密码，加盐，然后md5加密，得到一个结果，再与数据库的正确密码比较)
-        if(!CodecUtils.md5Hex(password,salt).equals(customer.getCUST_PASSWORD())){
+        if(!CodecUtils.md5Hex(password,salt).equals(customer.getCust_password())){
             return null;//密码错误
         }
 
