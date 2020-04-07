@@ -16,5 +16,9 @@
         <module name="insurance_customer_service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="insurance-login" target="1.8" />
+      <module name="insurance_auth" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
