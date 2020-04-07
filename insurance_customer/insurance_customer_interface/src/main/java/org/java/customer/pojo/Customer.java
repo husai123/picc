@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -52,7 +54,16 @@ public class Customer implements Serializable {
     @JsonIgnore//在序列化时，忽略当前属性
     private String salt;//加密使用的盐
 
-//    CUST_ID VARCHAR(36) NOT NULL   COMMENT '客户编号' ,
+    public void setCust_birthday(String cust_birthday) {
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            this.cust_birthday = sf.parse(cust_birthday);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //    CUST_ID VARCHAR(36) NOT NULL   COMMENT '客户编号' ,
 //    CUST_TRUENAME VARCHAR(32)    COMMENT '客户真实姓名' ,
 //    CUST_SEX VARCHAR(1)    COMMENT '客户性别{0：男，1：女}' ,
 //    CUST_IDENTITY VARCHAR(18)    COMMENT '客户身份证号码' ,

@@ -43,16 +43,17 @@ public class CustomerController {
 
     /**
      * 用户注册
-     * @param user
+     * @param customer
      * @return
      * 直接访问地址：localhost:14000/user/register?xx=xx,请求方式为post
-     * 网关访问地址: api.shopping.com/api/user/register/xxxx
+     * 网关访问地址: api.shopping.com/api/customer/register/xxxx
      */
     @PostMapping("/register")
-    public ResponseEntity<Void> registerUser(@Valid Customer user){
+    public ResponseEntity<Void> registerUser(@Valid Customer customer){
 
+        System.out.println("进来了");
         //注册新用户，成功返回true,失败返回false
-        Boolean flag = customerService.registerUser(user);
+        Boolean flag = customerService.registerUser(customer);
         if(flag==false){
             return ResponseEntity.badRequest().build();
         }
