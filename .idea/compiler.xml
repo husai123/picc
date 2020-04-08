@@ -10,8 +10,6 @@
         <module name="insurance-commom" />
         <module name="insurance-eureka" />
         <module name="insurance-gateway" />
-        <module name="insurance-login-interface" />
-        <module name="insurance-login-service" />
         <module name="insurance_auth_common" />
         <module name="insurance_auth_service" />
         <module name="insurance_customer_interface" />
@@ -20,6 +18,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="insurance-login" target="1.8" />
+      <module name="insurance-login-interface" target="1.8" />
+      <module name="insurance-login-service" target="1.8" />
       <module name="insurance_auth" target="1.8" />
     </bytecodeTargetLevel>
   </component>
