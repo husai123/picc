@@ -37,19 +37,21 @@ public class AuthController {
      * 直接访问地址: localhost:15000/accredit
      * 通过网关访问的地址是: api.shopping.com/api/auth/accredit
      *
-     * @param username
+     * @param
      * @param password
      * @param request
      * @param response
      * @return
      */
     @PostMapping("/accredit")
-    public ResponseEntity<Boolean> acrredit(@RequestParam("username") String username,
+    public ResponseEntity<Boolean> accredit(@RequestParam("date") String date,
                                             @RequestParam("password") String password,
                                             HttpServletRequest request,
                                             HttpServletResponse response) {
+
+        System.out.println("进来了11");
         //根据用户名 密码，生成token
-        String token = authService.accredit(username, password);
+        String token = authService.accredit(date, password);
 
         //如果token为null,表示用户名，密码错误，生成失败
         if (token == null) {
@@ -70,7 +72,7 @@ public class AuthController {
      * 如果进入该方法验证，只要信息正确，不论之前有效时间是多少，都重新设置为30分钟
      */
     @GetMapping("/verify")
-    public ResponseEntity<UserInfo> verify(@CookieValue(name = "shopping-token") String token,
+    public ResponseEntity<UserInfo> verify(@CookieValue(name = "insurance-token") String token,
                                            HttpServletRequest request,
                                            HttpServletResponse response) {
 

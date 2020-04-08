@@ -19,10 +19,10 @@ public class AuthService {
     private JwtProperties jwtProperties;
 
     //判断，用户信息是否正确，如果正确，就通过jwt生成token
-    public String accredit(String username, String password) {
+    public String accredit(String date, String password) {
 
         //访问user-service的方法，判断用户信息
-        Customer user = userClient.queryUser(username, password);
+        Customer user = userClient.queryUser(date, password);
 
         //判断对象是否为null,如果 为null,则信息不正确
         if (user == null) {

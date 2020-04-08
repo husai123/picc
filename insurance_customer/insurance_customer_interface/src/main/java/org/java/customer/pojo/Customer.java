@@ -39,6 +39,8 @@ public class Customer implements Serializable {
 
     @Pattern(regexp = "^1[356789]\\d{9}$",message = "电话号码格式错误")
     private String cust_phone;//'客户移动电话'
+
+
     private String cust_email;//'客户电子邮箱'
 
     @JsonIgnore//在序列化时，忽略当前属性

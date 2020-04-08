@@ -87,18 +87,22 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Customer queryUser(String date, String password) {
         //创建一个User对象，封装查询条件
-        Customer recode = new Customer();
+//        Customer recode = new Customer();
         //根据查询条件查询对象,有@符号就查邮箱，没有就查电话号码
-        if(date.indexOf("@")!=-1){
-            recode.setCust_email(date);
-        }else{
-            recode.setCust_phone(date);
-        }
+//        if(date.indexOf("@")!=-1){
+//            recode.setCust_email(date);
+//        }else{
+//            recode.setCust_phone(date);
+//        }
 
-        Customer customer = customerMapper.selectOne(recode);
+//        System.out.println(recode);
 
-        if(customer==null){
-            return null;//用户名不存在
+
+        Customer customer = customerMapper.findByOne(date);
+
+
+        if(customer ==null){
+            return null;//电话号码或邮箱不存在
         }
 
         //从数据库，获得当前用户生成的盐
