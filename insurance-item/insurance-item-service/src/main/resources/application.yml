@@ -1,0 +1,22 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: item-service
+    #数据库的配置
+  datasource:
+    url: jdbc:mysql:///insurance
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1234
+    type: com.alibaba.druid.pool.DruidDataSource
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8762/eureka
+  instance:
+      lease-renewal-interval-in-seconds: 5 #心跳续约时间
+      lease-expiration-duration-in-seconds: 15 #剔除服务时间
+  #给实体类指定别名
+mybatis:
+  type-aliases-package: org.java.insurance.entity
