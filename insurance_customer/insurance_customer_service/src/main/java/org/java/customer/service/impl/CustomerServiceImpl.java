@@ -6,6 +6,7 @@ import org.java.customer.service.CustomerService;
 import org.java.customer.util.CodecUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import java.util.Date;
 import java.util.UUID;
@@ -60,7 +61,7 @@ public class CustomerServiceImpl implements CustomerService {
      */
     @Override
     public Boolean registerUser(Customer customer) {
-
+        System.out.println("111111111");
         //设置用户编号
         customer.setCust_id(UUID.randomUUID().toString());
 
@@ -116,5 +117,11 @@ public class CustomerServiceImpl implements CustomerService {
         }
 
         return customer;//返回正确的数据
+    }
+
+    @Override
+    public Customer queryUserbyId(String name) {
+        Customer customer = customerMapper.UserbyId(name);
+        return customer;
     }
 }

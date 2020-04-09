@@ -6,4 +6,7 @@
         select * from customer where
         cust_phone=#{date} or cust_email=#{date}
     </select>
+    <select id="UserbyId" resultType="org.java.customer.pojo.Customer" >
+        select * from customer where cust_truename=#{name}
+    </select>
 </mapper>

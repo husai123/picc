@@ -31,4 +31,6 @@ public interface CustomerService {
      * @return
      */
     public Customer queryUser(String date, String password);
+
+    public Customer queryUserbyId(String name);
 }

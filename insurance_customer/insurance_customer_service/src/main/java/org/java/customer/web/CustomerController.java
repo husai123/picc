@@ -80,5 +80,12 @@ public class CustomerController {
 
         return ResponseEntity.ok(customer);
     }
+    @GetMapping("/byuserId/{name}")
+    public ResponseEntity<Customer> queryUserById(@PathVariable("name") String name){
+        System.out.println("11111");
+        Customer cus = customerService.queryUserbyId(name);
+        return ResponseEntity.status(HttpStatus.OK).body(cus);
+    }
+
 
 }
