@@ -18,10 +18,6 @@ zuul:
       path: /customer/**
       serviceId: customer-service
       strip-prefix: false #如果网关中的前缀与控制器的映射路径相同，只需要写一次
-    login-service:   #登录
-      path: /login/**
-      serviceId: login-service
-      strip-prefix: false #如果网关中的前缀与控制器的映射路径相同，只需要写一次
     auth-service:
       path: /auth/**
       serviceId: auth-service
