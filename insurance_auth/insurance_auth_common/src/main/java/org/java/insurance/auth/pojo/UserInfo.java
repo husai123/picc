@@ -5,16 +5,27 @@ package org.java.insurance.auth.pojo;
  */
 public class UserInfo {
 
-    private String id;
+    private String id;//编号
 
-    private String username;
+    private String username;//姓名
+
+    private String img;//头像
 
     public UserInfo() {
     }
 
-    public UserInfo(String id, String username) {
+    public UserInfo(String id, String username, String img) {
         this.id = id;
         this.username = username;
+        this.img = img;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getId() {

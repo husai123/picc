@@ -34,6 +34,7 @@ public class AuthService {
         UserInfo userInfo = new UserInfo();
         userInfo.setId(user.getCust_id());
         userInfo.setUsername(user.getCust_truename());
+        userInfo.setImg(user.getCust_head_img());
 
         String token;
         try {

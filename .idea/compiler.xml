@@ -10,6 +10,8 @@
         <module name="insurance-commom" />
         <module name="insurance-eureka" />
         <module name="insurance-gateway" />
+        <module name="insurance-item-interface" />
+        <module name="insurance-item-service" />
         <module name="insurance_auth_common" />
         <module name="insurance_auth_service" />
         <module name="insurance_customer_interface" />
