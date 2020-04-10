@@ -30,6 +30,7 @@ public class ItemServiceImpl implements ItemService{
      */
     @Override
     public PageResult<Item> findAll(Integer page, Integer limit) {
+
              //使用pageHelper分页查询
         PageHelper.startPage(page,limit);
 
@@ -45,7 +46,8 @@ public class ItemServiceImpl implements ItemService{
         //如果查询结果不为空，则封装成pageResult
         PageResult<Item> pageResult=new PageResult<>();
         pageResult.setData(list);//封装查询结果
-
+        pageResult.setCode(0);//数据正常
+        pageResult.setCount(info.getTotal());//设置查询到的数据总数
         return pageResult;
     }
 

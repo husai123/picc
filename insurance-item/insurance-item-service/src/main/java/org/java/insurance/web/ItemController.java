@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("item")
+@RequestMapping("/category")
 public class ItemController {
     @Autowired
     private ItemService itemService;
@@ -26,7 +26,9 @@ public class ItemController {
      * @param page
      * @param limit
      * @return
+     * 通过网关访问该地址是：http://api.insurance.com/api/item/category/list
      */
+
     @GetMapping("/list")
     public ResponseEntity<PageResult<Item>> loadItem(Integer page,Integer limit){
         PageResult<Item>  pageResult=itemService.findAll(page,limit);
