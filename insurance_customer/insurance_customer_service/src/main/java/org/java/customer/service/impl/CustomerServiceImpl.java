@@ -124,4 +124,25 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = customerMapper.UserbyId(name);
         return customer;
     }
+
+    @Override
+    public void updatePwd(String uname, String pwd) {
+        Customer customer = customerMapper.UserbyId(uname);
+        //得到盐----------我们可以采用一个工具类生成盐
+        String salt = CodecUtils.generateSalt();
+        //对用户输入的密码进行MD5加密
+        customer.setCust_password(CodecUtils.md5Hex(pwd,salt));
+        customer.setSalt(salt);
+        customerMapper.updateByPrimaryKey(customer);
+        //将盐设置到user中
+
+    }
+
+//    @Override
+//    public void updateSalt(String uname, String salt) {
+//        salt = CodecUtils.generateSalt();
+//        customerMapper.updateSalt(uname,salt);
+//    }
+
+
 }

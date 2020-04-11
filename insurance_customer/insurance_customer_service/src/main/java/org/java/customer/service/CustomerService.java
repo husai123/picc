@@ -31,6 +31,9 @@ public interface CustomerService {
      * @return
      */
     public Customer queryUser(String date, String password);
-
+    //查询用户信息
     public Customer queryUserbyId(String name);
+    //修改密码
+    public void updatePwd(String uname,String pwd);
+
 }

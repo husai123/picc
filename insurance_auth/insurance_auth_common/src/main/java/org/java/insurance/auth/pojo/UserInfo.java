@@ -11,9 +11,12 @@ public class UserInfo {
 
     private String img;//头像
 
+    public UserInfo(String id, String username) {
+        this.id = id;
+        this.username = username;
+    }
     public UserInfo() {
     }
-
     public UserInfo(String id, String username, String img) {
         this.id = id;
         this.username = username;

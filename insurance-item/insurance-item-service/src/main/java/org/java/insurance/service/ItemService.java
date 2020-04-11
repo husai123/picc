@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface ItemService {
     public PageResult<Item> findAll(Integer page, Integer limit);
+
+    void delByid(Integer case_closed_id);
+
+    void saveItem(Item item);
 }
