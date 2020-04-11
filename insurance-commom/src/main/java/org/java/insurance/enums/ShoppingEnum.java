@@ -18,8 +18,8 @@ public enum ShoppingEnum {
 
     SKU_ADD_ERROR(404,"商品新增失败"),
     SKU_LIST_NOT_FOUND(404,"商品列表不存在"),
-    BRAND_ADD_ERROR(404,"品牌新增失败"),
-    BRAND_REMOVE_ERROR(404,"品牌删除失败"),
+    BRAND_ADD_ERROR(404,"销案新增失败"),
+    BRAND_REMOVE_ERROR(404,"销案删除失败"),
     BRAND_LIST_NOT_FOUND(404,"销案列表不存在"),
     CATEGORY_LIST_NOT_FOUND(404,"商品列表不存在"),
     NAME_CANNOT_BE_NOT(400,"名称不允许为空"),
