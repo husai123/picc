@@ -7,5 +7,4 @@ public interface CustomerMapper extends Mapper<Customer> {
 
     public Customer findByOne(String date);
     public Customer UserbyId(String name);
-
 }

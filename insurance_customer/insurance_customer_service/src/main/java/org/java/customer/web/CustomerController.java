@@ -86,6 +86,10 @@ public class CustomerController {
         Customer cus = customerService.queryUserbyId(name);
         return ResponseEntity.status(HttpStatus.OK).body(cus);
     }
+    @PutMapping("/updatePwd/{uname}/{pwd}")
+    public ResponseEntity<Void> updatePwd(@PathVariable("uname")String uname,@PathVariable("pwd")String pwd){
+        customerService.updatePwd(uname,pwd);
 
-
+        return ResponseEntity.ok().build();
+    }
 }
