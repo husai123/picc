@@ -3,8 +3,8 @@ package org.java.insurance.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.java.insurance.entity.Item;
-import org.java.insurance.enums.ShoppingEnum;
-import org.java.insurance.exception.ShoppingException;
+import org.java.insurance.enums.InsuranceEnum;
+import org.java.insurance.exception.InsuranceException;
 import org.java.insurance.mapper.ItemMapper;
 import org.java.insurance.ov.PageResult;
 import org.java.insurance.service.ItemService;
@@ -41,7 +41,7 @@ public class ItemServiceImpl implements ItemService{
         List list=info.getList();
 
         if (CollectionUtils.isEmpty(list)){
-            throw new ShoppingException(ShoppingEnum.BRAND_LIST_NOT_FOUND);
+            throw new InsuranceException(InsuranceEnum.BRAND_LIST_NOT_FOUND);
         }
         //如果查询结果不为空，则封装成pageResult
         PageResult<Item> pageResult=new PageResult<>();

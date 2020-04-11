@@ -80,14 +80,15 @@ public class JwtUtils {
      * @return 用户信息
      * @throws Exception
      */
-//    public static UserInfo getInfoFromToken(String token, PublicKey publicKey) throws Exception {
-//        Jws<Claims> claimsJws = parserToken(token, publicKey);
-//        Claims body = claimsJws.getBody();
-//        return new UserInfo(
-//                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_ID)),
-//                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_USER_NAME))
-//        );
-//    }
+    public static UserInfo getInfoFromToken(String token, PublicKey publicKey) throws Exception {
+        Jws<Claims> claimsJws = parserToken(token, publicKey);
+        Claims body = claimsJws.getBody();
+        return new UserInfo(
+                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_ID)),
+                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_USER_NAME)),
+                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_IMG))
+        );
+    }
 
     /**
      * 获取token中的用户信息
@@ -97,12 +98,13 @@ public class JwtUtils {
      * @return 用户信息
      * @throws Exception
      */
-//    public static UserInfo getInfoFromToken(String token, byte[] publicKey) throws Exception {
-//        Jws<Claims> claimsJws = parserToken(token, publicKey);
-//        Claims body = claimsJws.getBody();
-//        return new UserInfo(
-//                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_ID)),
-//                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_USER_NAME))
-//        );
-//    }
+    public static UserInfo getInfoFromToken(String token, byte[] publicKey) throws Exception {
+        Jws<Claims> claimsJws = parserToken(token, publicKey);
+        Claims body = claimsJws.getBody();
+        return new UserInfo(
+                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_ID)),
+                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_USER_NAME)),
+                ObjectUtils.toString(body.get(JwtConstans.JWT_KEY_IMG))
+        );
+    }
 }

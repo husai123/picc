@@ -1,11 +1,10 @@
 package org.java.auth.service;
 
-import net.bytebuddy.asm.Advice;
 import org.java.auth.config.JwtProperties;
 import org.java.auth.feign.UserClient;
 import org.java.insurance.auth.pojo.UserInfo;
-import org.java.insurance.auth.utils.JwtUtils;
 import org.java.customer.pojo.Customer;
+import org.java.insurance.auth.utils.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

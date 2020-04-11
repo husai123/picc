@@ -7,7 +7,6 @@ import org.java.insurance.auth.pojo.UserInfo;
 import org.java.insurance.auth.utils.JwtUtils;
 import org.java.insurance.util.CookieUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

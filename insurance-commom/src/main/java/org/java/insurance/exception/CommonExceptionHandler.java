@@ -1,11 +1,8 @@
 package org.java.insurance.exception;
 
 
-import org.java.insurance.enums.ShoppingEnum;
+import org.java.insurance.enums.InsuranceEnum;
 import org.java.insurance.ov.ExceptionResult;
-import org.java.insurance.enums.ShoppingEnum;
-import org.java.insurance.ov.ExceptionResult;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -23,12 +20,12 @@ public class CommonExceptionHandler {
      * @return
      */
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<ExceptionResult> handleException(ShoppingException ex){
+    public ResponseEntity<ExceptionResult> handleException(InsuranceException ex){
         //获得ShoppingException中的枚举属性
-        ShoppingEnum shoppingEnum = ex.getShoppingEnum();
+        InsuranceEnum insuranceEnum = ex.getInsuranceEnum();
 
         //构建一个ExceptionResult对象，返回异常信息
-        return ResponseEntity.status(shoppingEnum.getCode()).body(new ExceptionResult(shoppingEnum));
+        return ResponseEntity.status(insuranceEnum.getCode()).body(new ExceptionResult(insuranceEnum));
     }
 
 }

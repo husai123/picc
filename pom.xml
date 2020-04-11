@@ -15,6 +15,7 @@
         <module>insurance_customer</module>
         <module>insurance_auth</module>
         <module>insurance-item</module>
+        <module>insurance_order</module>
     </modules>
 
 
