@@ -24,6 +24,9 @@ public interface CustomerService {
      */
     public Boolean registerUser(Customer customer);
 
+
+    public Customer queryCustomerById(String id);
+
     /**
      * 根据用户电话号或邮箱与密码，查询数据
      * @param date

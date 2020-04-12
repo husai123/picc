@@ -40,7 +40,11 @@
             <artifactId>insurance-commom</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
+        <!--导入feign的依赖，授权中心接收到用户名，密码，要通过User-service连接数据库来判断，数据是否正确-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!--分页的依赖-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>

@@ -78,6 +78,11 @@ public class CustomerServiceImpl implements CustomerService {
         return  customerMapper.insertSelective(customer)==1;
     }
 
+    @Override
+    public Customer queryCustomerById(String id) {
+        return customerMapper.selectByPrimaryKey(id);
+    }
+
 
     /**
      * 根据用户电话号或邮箱与密码，查询数据
