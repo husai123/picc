@@ -4,8 +4,9 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.java.insurance.entity.Item;
 import org.java.insurance.entity.Robbery;
+import org.java.insurance.enums.InsuranceEnum;
 import org.java.insurance.enums.ShoppingEnum;
-import org.java.insurance.exception.ShoppingException;
+import org.java.insurance.exception.InsuranceException;
 import org.java.insurance.mapper.RobberyMapper;
 import org.java.insurance.ov.PageResult;
 import org.java.insurance.service.RobberyService;
@@ -39,7 +40,7 @@ public class RobberyServiceImpl implements RobberyService {
         List list=info.getList();
 
         if (CollectionUtils.isEmpty(list)){
-            throw new ShoppingException(ShoppingEnum.Robbery_LIST_NOT_FOUND);
+            throw new InsuranceException(InsuranceEnum.Robbery_LIST_NOT_FOUND);
         }
         //如果查询结果不为空，则封装成pageResult
         PageResult<Robbery> pageResult=new PageResult<>();

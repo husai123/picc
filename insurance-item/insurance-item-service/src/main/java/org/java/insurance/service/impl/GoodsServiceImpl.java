@@ -4,8 +4,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.java.insurance.entity.Goods;
 import org.java.insurance.entity.Item;
-import org.java.insurance.enums.ShoppingEnum;
-import org.java.insurance.exception.ShoppingException;
+import org.java.insurance.enums.InsuranceEnum;
+import org.java.insurance.exception.InsuranceException;
 import org.java.insurance.mapper.GoodsMapper;
 import org.java.insurance.ov.PageResult;
 import org.java.insurance.service.GoodsService;
@@ -41,7 +41,7 @@ public class GoodsServiceImpl implements GoodsService {
         List list=info.getList();
 
         if (CollectionUtils.isEmpty(list)){
-            throw new ShoppingException(ShoppingEnum.GOODS_LIST_NOT_FOUND);
+            throw new InsuranceException(InsuranceEnum.GOODS_LIST_NOT_FOUND);
         }
         //如果查询结果不为空，则封装成pageResult
         PageResult<Goods> pageResult=new PageResult<>();

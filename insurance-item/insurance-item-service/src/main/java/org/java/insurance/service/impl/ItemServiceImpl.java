@@ -61,7 +61,7 @@ public class ItemServiceImpl implements ItemService{
         int count = itemMapper.deleteByPrimaryKey(case_closed_id);//删除数据返回受影响的行数
           if (count==0){
               //删除失败
-              throw new  ShoppingException(ShoppingEnum.BRAND_REMOVE_ERROR);
+              throw new  InsuranceException(InsuranceEnum.BRAND_REMOVE_ERROR);
           }
 
     }
@@ -76,7 +76,7 @@ public class ItemServiceImpl implements ItemService{
 //        itemMapper.insertSelective(item) //给对象中的非空属性赋值
         int count = itemMapper.insert(item);//给对象中所有属性赋值
         if (count==0){
-            throw new ShoppingException(ShoppingEnum.BRAND_ADD_ERROR);
+            throw new InsuranceException(InsuranceEnum.BRAND_ADD_ERROR);
         }
 
     }

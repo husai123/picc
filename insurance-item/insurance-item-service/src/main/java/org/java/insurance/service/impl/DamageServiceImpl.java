@@ -4,8 +4,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.java.insurance.entity.Damage;
 import org.java.insurance.entity.Goods;
-import org.java.insurance.enums.ShoppingEnum;
-import org.java.insurance.exception.ShoppingException;
+import org.java.insurance.enums.InsuranceEnum;
+import org.java.insurance.exception.InsuranceException;
 import org.java.insurance.mapper.DamageMapper;
 import org.java.insurance.ov.PageResult;
 import org.java.insurance.service.DamageService;
@@ -41,7 +41,7 @@ public class DamageServiceImpl implements DamageService {
         List list=info.getList();
 
         if (CollectionUtils.isEmpty(list)){
-            throw new ShoppingException(ShoppingEnum.Damage_LIST_NOT_FOUND);
+            throw new InsuranceException(InsuranceEnum.Damage_LIST_NOT_FOUND);
         }
         //如果查询结果不为空，则封装成pageResult
         PageResult<Damage> pageResult=new PageResult<>();

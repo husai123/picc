@@ -4,8 +4,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.java.insurance.entity.Robbery;
 import org.java.insurance.entity.Vehicle;
-import org.java.insurance.enums.ShoppingEnum;
-import org.java.insurance.exception.ShoppingException;
+import org.java.insurance.enums.InsuranceEnum;
+import org.java.insurance.exception.InsuranceException;
 import org.java.insurance.mapper.VehicleMapper;
 import org.java.insurance.ov.PageResult;
 import org.java.insurance.service.VehicleService;
@@ -39,7 +39,7 @@ public class VehicleServiceImpl implements VehicleService{
         List list=info.getList();
 
         if (CollectionUtils.isEmpty(list)){
-            throw new ShoppingException(ShoppingEnum.VEHICLE_LIST_NOT_FOUND);
+            throw new InsuranceException(InsuranceEnum.VEHICLE_LIST_NOT_FOUND);
         }
         //如果查询结果不为空，则封装成pageResult
         PageResult<Vehicle> pageResult=new PageResult<>();
