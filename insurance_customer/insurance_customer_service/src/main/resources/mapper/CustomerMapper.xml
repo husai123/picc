@@ -9,4 +9,8 @@
     <select id="UserbyId" resultType="org.java.customer.pojo.Customer" >
         select * from customer where cust_truename=#{name}
     </select>
+    <select id="queryCustomerById" resultType="org.java.customer.pojo.Customer" >
+        select * from customer where
+        cust_id=#{id}
+    </select>
 </mapper>

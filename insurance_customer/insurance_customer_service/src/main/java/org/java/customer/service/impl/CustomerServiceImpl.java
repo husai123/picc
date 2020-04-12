@@ -80,7 +80,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer queryCustomerById(String id) {
-        return customerMapper.selectByPrimaryKey(id);
+        return customerMapper.queryCustomerById(id);
     }
 
 
