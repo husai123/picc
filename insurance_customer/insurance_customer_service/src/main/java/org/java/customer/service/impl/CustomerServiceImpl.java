@@ -138,6 +138,15 @@ public class CustomerServiceImpl implements CustomerService {
 
     }
 
+    @Override
+    public void updateInfo(String uname, String phone, String email) {
+        Customer customer = customerMapper.UserbyId(uname);
+        customer.setCust_email(email);
+        customer.setCust_phone(phone);
+        customer.setCust_truename(uname);
+        customerMapper.updateByPrimaryKey(customer);
+    }
+
 //    @Override
 //    public void updateSalt(String uname, String salt) {
 //        salt = CodecUtils.generateSalt();

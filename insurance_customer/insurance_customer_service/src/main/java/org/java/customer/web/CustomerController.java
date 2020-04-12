@@ -82,14 +82,17 @@ public class CustomerController {
     }
     @GetMapping("/byuserId/{name}")
     public ResponseEntity<Customer> queryUserById(@PathVariable("name") String name){
-        System.out.println("11111");
         Customer cus = customerService.queryUserbyId(name);
         return ResponseEntity.status(HttpStatus.OK).body(cus);
     }
     @PutMapping("/updatePwd/{uname}/{pwd}")
     public ResponseEntity<Void> updatePwd(@PathVariable("uname")String uname,@PathVariable("pwd")String pwd){
         customerService.updatePwd(uname,pwd);
-
+        return ResponseEntity.ok().build();
+    }
+    @PutMapping("/updateInfo/{uname}/{phone}/{email}")
+    public ResponseEntity<Void> updateInfo(@PathVariable("uname")String uname,@PathVariable("phone")String phone,@PathVariable("email")String email){
+        customerService.updateInfo(uname,phone,email);
         return ResponseEntity.ok().build();
     }
 }
