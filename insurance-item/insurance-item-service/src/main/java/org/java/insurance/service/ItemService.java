@@ -11,4 +11,6 @@ public interface ItemService {
     void delByid(Integer case_closed_id);
 
     void saveItem(Item item);
+
+    void updateItem(Item item);
 }

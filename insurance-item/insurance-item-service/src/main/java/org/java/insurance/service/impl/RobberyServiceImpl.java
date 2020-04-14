@@ -17,7 +17,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.List;
 
 @Service
-public class RobberyServiceImpl implements RobberyService {
+public class RobberyServiceImpl implements RobberyService{
     @Autowired
     private RobberyMapper robberyMapper;
 
@@ -49,4 +49,51 @@ public class RobberyServiceImpl implements RobberyService {
         pageResult.setCount(info.getTotal());//设置查询到的数据总数
         return pageResult;
     }
+
+
+    /**
+     * 根据id删除
+     * @param robbery_damage_id
+     */
+    @Override
+    public void delByid(Integer robbery_damage_id) {
+        int count = robberyMapper.deleteByPrimaryKey(robbery_damage_id);//删除数据返回受影响的行数
+        if (count==0){
+            //删除失败
+            throw new  InsuranceException(InsuranceEnum.Robbery__REMOVE_ERROR);
+        }
+
+    }
+
+
+    /**
+     * 新增盗抢定损
+     * @param robbery
+     */
+    @Override
+    public void saveItem(Robbery robbery) {
+      //  robberyMapper.insertSelective(robbery) //给对象中的非空属性赋值
+        int count = robberyMapper.insert(robbery);//给对象中所有属性赋值
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.Robbery_ADD_ERROR);
+        }
+
+    }
+
+
+    /**
+     * 修改盗抢定损
+     * @param robbery
+     */
+    @Override
+    public void updateItem(Robbery robbery) {
+        int count = robberyMapper.updateByPrimaryKey(robbery);
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.DAMAGE_UPDATE_ERROR);
+        }
+
+
+    }
+
+
 }

@@ -7,9 +7,7 @@ import org.java.insurance.service.RobberyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("robbery")
@@ -42,6 +40,46 @@ public class RobberyController {
     }
 
 
+    /**
+     * 盗抢删除
+     * @param robbery_damage_id
+     * @return
+     * 通过网关访问该地址是：http://api.insurance.com/api/item/robbery/del？id=xxx
+     */
+    @DeleteMapping("/del")
+    public ResponseEntity<Void>  del(Integer robbery_damage_id){
+        robberyService.delByid(robbery_damage_id);
+        return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+
+
+
+    /**
+     * 盗抢新增
+     * @param robbery
+     * @return
+     * 通过网关访问该地址是:http://api.insurance.com/api/item/robbery/save?json对象
+     */
+    @PostMapping("/save")
+    public ResponseEntity<Void> saveItem(Robbery robbery){
+        robberyService.saveItem(robbery);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+
+
+    /**
+     * 盗抢定损修改
+     * http://api.insurance.com/api/item/robbery/update
+     * @param robbery
+     * @return
+     */
+    @PutMapping("/update")
+    public ResponseEntity<Void> updateItem(Robbery robbery){
+        robberyService.updateItem(robbery);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 
 
 

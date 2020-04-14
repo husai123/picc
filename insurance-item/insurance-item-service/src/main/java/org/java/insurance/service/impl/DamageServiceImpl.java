@@ -16,7 +16,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.List;
 
 @Service
-public class DamageServiceImpl implements DamageService {
+public class DamageServiceImpl implements DamageService{
 
     @Autowired
     private DamageMapper damageMapper;
@@ -53,4 +53,47 @@ public class DamageServiceImpl implements DamageService {
         return pageResult;
 
     }
+
+
+    /**
+     * 根据id删除人伤定损
+     * @param human_injury_damage_id
+     */
+    @Override
+    public void delByid(Integer human_injury_damage_id) {
+        int count = damageMapper.deleteByPrimaryKey(human_injury_damage_id);
+
+        if (count==0){
+            //删除失败
+            throw new InsuranceException(InsuranceEnum.DAMAGE__REMOVE_ERROR);
+        }
+    }
+
+
+    /**
+     * 新增人伤定损
+     * @param damage
+     */
+    @Override
+    public void saveItem(Damage damage) {
+        //        itemMapper.insertSelective(item) //给对象中的非空属性赋值
+        int count = damageMapper.insert(damage);//给对象中所有属性赋值
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.DAMAGE_ADD_ERROR);
+        }
+    }
+
+
+    /**
+     * 修改人伤定损
+     * @param damage
+     */
+    @Override
+    public void updateItem(Damage damage) {
+        int count = damageMapper.updateByPrimaryKey(damage);
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.DAMAGE_UPDATE_ERROR);
+        }
+    }
+
 }

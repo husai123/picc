@@ -16,7 +16,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.List;
 
 @Service
-public class GoodsServiceImpl implements GoodsService {
+public class GoodsServiceImpl implements GoodsService{
 
 
     @Autowired
@@ -51,5 +51,44 @@ public class GoodsServiceImpl implements GoodsService {
 
 
         return pageResult;
+    }
+
+
+    /**
+     * 根据id删除
+     * @param damage_of_goods_id
+     */
+    @Override
+    public void delById(Integer damage_of_goods_id) {
+        int count = goodsMapper.deleteByPrimaryKey(damage_of_goods_id);
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.GOODS_REMOVE_ERROR);
+        }
+    }
+
+    /**
+     * 新增物损定损
+     * @param goods
+     */
+    @Override
+    public void saveItem(Goods goods) {
+        //        itemMapper.insertSelective(item) //给对象中的非空属性赋值
+        int count = goodsMapper.insert(goods);//给对象中所有属性赋值
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.GOODS_ADD_ERROR);
+        }
+    }
+
+
+    /**
+     * 修改物损定损
+     * @param goods
+     */
+    @Override
+    public void updateItem(Goods goods) {
+        int count = goodsMapper.updateByPrimaryKey(goods);
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.DAMAGE_UPDATE_ERROR);
+        }
     }
 }

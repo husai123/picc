@@ -8,9 +8,7 @@ import org.java.insurance.service.DamageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/human")
@@ -41,6 +39,44 @@ public class DamageController {
     public ResponseEntity<PageResult<Damage>> loadItem(Integer page, Integer limit){
         PageResult<Damage>  pageResult=damageService.findAll(page,limit);
         return ResponseEntity.status(HttpStatus.OK).body(pageResult);
+    }
+
+
+    /**
+     * 根据id删除
+     * @param human_injury_damage_id
+     * @return
+     * 网关访问地址 http://api.insurance.com/api/item/human/del？id=xxx
+     */
+    @DeleteMapping("/del")
+    public ResponseEntity<Void> del(Integer human_injury_damage_id){
+        damageService.delByid(human_injury_damage_id);
+        return  ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+
+    /**
+     * 人损定损新增
+     * @param damage
+     * @return
+     * 通过网关访问该地址是:http://api.insurance.com/api/item/human/save?json对象
+     */
+    @PostMapping("/save")
+    public ResponseEntity<Void> saveItem(Damage damage){
+        damageService.saveItem(damage);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    /**
+     * 人损定损修改
+     * http://api.insurance.com/api/item/human/update
+     * @param damage
+     * @return
+     */
+    @PutMapping("/update")
+    public ResponseEntity<Void> updateItem(Damage damage){
+        damageService.updateItem(damage);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
 

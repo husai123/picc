@@ -82,4 +82,17 @@ public class ItemServiceImpl implements ItemService{
     }
 
 
+    /**
+     * 修改销案
+     * @param item
+     */
+    @Override
+    public void updateItem(Item item) {
+        int count = itemMapper.updateByPrimaryKey(item);
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.GOODS_UPDATE_ERROR);
+        }
+    }
+
+
 }

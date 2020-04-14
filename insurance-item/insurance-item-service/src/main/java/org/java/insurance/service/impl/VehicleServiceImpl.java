@@ -48,4 +48,47 @@ public class VehicleServiceImpl implements VehicleService{
         pageResult.setCount(info.getTotal());//设置查询到的数据总数
         return pageResult;
     }
+
+
+    /**
+     * 根据id删除
+     * @param vehicle_damage_id
+     */
+    @Override
+    public void delByid(Integer vehicle_damage_id) {
+        int count = vehicleMapper.deleteByPrimaryKey(vehicle_damage_id);//删除数据返回受影响的行数
+        if (count==0){
+            //删除失败
+            throw new  InsuranceException(InsuranceEnum.VEHICLE__REMOVE_ERROR);
+        }
+    }
+
+
+    /**
+     * 车辆定损添加
+     *
+     * @param vehicle
+     */
+    @Override
+    public void saveItem(Vehicle vehicle) {
+  //      itemMapper.insertSelective(vehicle) //给对象中的非空属性赋值
+        int count = vehicleMapper.insert(vehicle);//给对象中所有属性赋值
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.VEHICLE_ADD_ERROR);
+        }
+    }
+
+
+    /**
+     * 车辆定损修改
+     * @param vehicle
+     */
+    @Override
+    public void updateItem(Vehicle vehicle) {
+        int count = vehicleMapper.updateByPrimaryKey(vehicle);
+        if (count==0){
+            throw new InsuranceException(InsuranceEnum.VEHICLE_UPDATE_ERROR);
+        }
+
+    }
 }

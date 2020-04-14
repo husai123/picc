@@ -70,6 +70,18 @@ public class ItemController {
     }
 
 
+    /**
+     * 销案修改
+     * http://api.insurance.com/api/item/category/update
+     * @param item
+     * @return
+     */
+     @PutMapping("/update")
+    public ResponseEntity<Void> updateItem(Item item){
+          itemService.updateItem(item);
+          return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+     }
+
 
 
 }
