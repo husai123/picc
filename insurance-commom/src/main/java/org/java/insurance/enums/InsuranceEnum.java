@@ -14,6 +14,9 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 public enum InsuranceEnum {
+
+    CUSTOMER_ORDER_NOT_LIST(404,"订单数据不存在"),
+
     //此处，相当于带参数的构造方法
     TYPE_OF_INSURANCE_LIST_No_EXISTS(404,"险种列表不存在"),
 
