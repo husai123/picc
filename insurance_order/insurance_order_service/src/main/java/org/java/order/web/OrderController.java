@@ -60,7 +60,7 @@ public class OrderController {
     @PostMapping("/submit_inquiry/{order_id}")
     public ResponseEntity<Void> submit_inquiry(@PathVariable("order_id")String order_id){
         orderService.submit_inquiry(order_id);
-        return ResponseEntity.ok(null);
+        return null;
     }
 
 }

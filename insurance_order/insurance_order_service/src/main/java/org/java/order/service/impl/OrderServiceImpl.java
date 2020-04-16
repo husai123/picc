@@ -30,6 +30,16 @@ import java.util.*;
 @Service
 public class OrderServiceImpl implements OrderService {
 
+    @Autowired
+    private RuntimeService runtimeService;
+
+    @Autowired
+    private IdentityService identityService;
+
+    @Autowired
+    private TaskService taskService;
+
+
     /**
      * 客户投保订单
      */
@@ -70,18 +80,11 @@ public class OrderServiceImpl implements OrderService {
     /**
      * 险种信息
      */
+    @Autowired
     private Type_Of_InsuranceMapper type_of_insuranceMapper;
 
 
 
-    @Autowired
-    private RuntimeService runtimeService;
-
-    @Autowired
-    private IdentityService identityService;
-
-    @Autowired
-    private TaskService taskService;
 
 
     @Override

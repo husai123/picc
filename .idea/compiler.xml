@@ -25,6 +25,7 @@
       <module name="insurance-login-interface" target="1.8" />
       <module name="insurance-login-service" target="1.8" />
       <module name="insurance_auth" target="1.8" />
+      <module name="insurance_order" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -13,6 +13,9 @@ eureka:
     lease-renewal-interval-in-seconds: 5   #每一个服务多久向eureka发送一次心跳：5s （开发环境可以改，生产环境不要改
 
 zuul:
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 60000   #socket超时
   routes:
     customer-service: #用户中心
       path: /customer/**
@@ -31,7 +34,9 @@ zuul:
   prefix: /api  #所有经过网关的请求，加上前
   add-host-header: true #经过网关调用微服务时，继续携带请求头中的域名  shopping.com
   sensitive-headers: #不用指定任何内容，覆盖原有配置，表示没有敏感关键字
-
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
 #配置jwt解析的相关信息，以及token的名称
 #配置JWT需要的参数信息，不用硬编码在代码中
 #insurance:
