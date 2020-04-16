@@ -39,5 +39,5 @@ public interface CustomerService {
     //修改密码
     public void updatePwd(String uname,String pwd);
 
-    public void updateInfo(String uname, String phone, String email);
+    public void updateInfo(String id, String phone, String email,String uname);
 }

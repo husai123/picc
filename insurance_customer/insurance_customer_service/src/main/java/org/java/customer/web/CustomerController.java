@@ -89,9 +89,9 @@ public class CustomerController {
 
 
 
-    @GetMapping("/byuserId/{name}")
-    public ResponseEntity<Customer> queryUserById(@PathVariable("name") String name){
-        Customer cus = customerService.queryUserbyId(name);
+    @GetMapping("/byuserId/{id}")
+    public ResponseEntity<Customer> queryUserById(@PathVariable("id") String id){
+        Customer cus = customerService.queryCustomerById(id);
         return ResponseEntity.status(HttpStatus.OK).body(cus);
     }
     @PutMapping("/updatePwd/{uname}/{pwd}")
@@ -99,9 +99,9 @@ public class CustomerController {
         customerService.updatePwd(uname,pwd);
         return ResponseEntity.ok().build();
     }
-    @PutMapping("/updateInfo/{uname}/{phone}/{email}")
-    public ResponseEntity<Void> updateInfo(@PathVariable("uname")String uname,@PathVariable("phone")String phone,@PathVariable("email")String email){
-        customerService.updateInfo(uname,phone,email);
+    @PutMapping("/updateInfo/{id}/{uname}/{phone}/{email}")
+    public ResponseEntity<Void> updateInfo(@PathVariable("id")String id,@PathVariable("uname")String uname,@PathVariable("phone")String phone,@PathVariable("email")String email){
+        customerService.updateInfo(id,phone,email,uname);
         return ResponseEntity.ok().build();
     }
 }

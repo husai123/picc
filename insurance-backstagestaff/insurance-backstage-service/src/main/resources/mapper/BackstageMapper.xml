@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.java.insurance.dao.backUserMapper">
+    <select id="querybackstageById" resultType="org.java.insurance.entity.backUser" >
+        select * from employee where
+        emp_id=#{id}
+    </select>
+    <select id="queryemployeeById" resultType="org.java.insurance.entity.role_employee_relationship" >
+        select * from role_employee_relationship where
+        emp_id=#{id}
+    </select>
+    <select id="queryrolepermissionById" resultType="org.java.insurance.entity.role_permission_relationship" >
+        select * from role_permission_relationship where
+        role_id=#{id}
+    </select>
+    <select id="querypermissionById" resultType="org.java.insurance.entity.permission" >
+        select * from permission where
+        permission_id=#{id}
+    </select>
+
+</mapper>

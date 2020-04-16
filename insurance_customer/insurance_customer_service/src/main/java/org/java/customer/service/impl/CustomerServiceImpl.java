@@ -144,8 +144,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void updateInfo(String uname, String phone, String email) {
-        Customer customer = customerMapper.UserbyId(uname);
+    public void updateInfo(String id, String phone, String email,String uname) {
+        Customer customer = customerMapper.queryCustomerById(id);
         customer.setCust_email(email);
         customer.setCust_phone(phone);
         customer.setCust_truename(uname);

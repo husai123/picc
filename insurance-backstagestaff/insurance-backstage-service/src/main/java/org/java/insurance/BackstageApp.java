@@ -7,7 +7,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan(basePackages = "org.java.insurance.mapper")
+@MapperScan(basePackages = "org.java.insurance.dao")
 public class BackstageApp {
     public static void main(String[] args) {
         SpringApplication.run(BackstageApp.class);
