@@ -11,7 +11,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class backUser implements Serializable {
-    private String emp_id;
+    private Long emp_id;
     private String username;
     private String password;
     private String phone;
