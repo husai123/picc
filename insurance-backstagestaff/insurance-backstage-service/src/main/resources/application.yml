@@ -1,0 +1,21 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: backstage-service
+    #数据库的配置
+  datasource:
+    url: jdbc:mysql:///insurance
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 666666
+    type: com.alibaba.druid.pool.DruidDataSource
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8762/eureka
+  instance:
+      lease-renewal-interval-in-seconds: 5 #心跳续约时间
+      lease-expiration-duration-in-seconds: 15 #剔除服务时间
+mybatis:
+  mapper-locations: mapper/*Mapper.xml

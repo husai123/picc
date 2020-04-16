@@ -9,11 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>insurance_order</artifactId>
+    <groupId>org.java.insurance</groupId>
+    <artifactId>insurance-backstagestaff</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>insurance_order_interface</module>
-        <module>insurance_order_service</module>
+        <module>insurance-backstage-interface</module>
+        <module>insurance-backstage-service</module>
     </modules>
 
 
