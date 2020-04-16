@@ -1,17 +1,16 @@
-package org.java.customer.service.impl;
+package org.java.user.servcie.impl;
 
 
-import org.java.customer.dao.EmployeeMapper;
-import org.java.customer.pojo.Employee;
-import org.java.customer.service.EmployeeService;
-import org.java.customer.util.CodecUtils;
+
+import org.java.user.mapper.EmployeeMapper;
+import org.java.user.pojo.Employee;
+import org.java.user.servcie.EmployeeService;
+import org.java.user.util.CodecUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-
 @Service
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EmployeeMapper employeeMapper;

@@ -1,6 +1,7 @@
-package org.java.customer.service;
+package org.java.user.servcie;
 
-import org.java.customer.pojo.Employee;
+
+import org.java.user.pojo.Employee;
 
 public interface EmployeeService {
 

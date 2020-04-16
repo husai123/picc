@@ -15,7 +15,8 @@
         <module>insurance_customer</module>
         <module>insurance_auth</module>
         <module>insurance-item</module>
-        <module>insurance-backstagestaff</module>
+        <module>insurance_user</module>
+        <module>insurance_userauth</module>
     </modules>
 
 
