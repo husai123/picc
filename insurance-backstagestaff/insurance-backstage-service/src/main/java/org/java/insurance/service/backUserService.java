@@ -1,11 +1,10 @@
 package org.java.insurance.service;
 
-import org.java.insurance.entity.backUser;
+import org.java.insurance.entity.employee;
 import org.java.insurance.entity.permission;
-import org.java.insurance.entity.role_employee_relationship;
 
 public interface backUserService {
-    public backUser querybackstageById(Long id);
-    public permission querypermissionById(Long id);
-    public void updatePermissionPwd(Long id,String uname,String phone);
+    public employee querybackstageById(String id);
+    public permission querypermissionById(String id);
+    public void updatePermissionPwd(String id,String uname,String phone);
 }
