@@ -7,7 +7,7 @@ spring:
     url: jdbc:mysql:///insurance
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 111111
+    password: 1234
     type: com.alibaba.druid.pool.DruidDataSource
 mybatis:
   mapper-locations: mapper/*Mapper.xml
