@@ -4,27 +4,35 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-backstagestaff" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-backstagestaff/insurance-backstage-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance-backstagestaff/insurance-backstage-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-backstagestaff/insurance-backstage-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance-backstagestaff/insurance-backstage-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-commom" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance-commom/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-item" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-item/insurance-item-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance-item/insurance-item-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance-item/insurance-item-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance-item/insurance-item-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_auth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_auth/insurance_auth_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_auth/insurance_auth_common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_auth/insurance_auth_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_auth/insurance_auth_service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_customer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_customer/insurance_customer_interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_customer/insurance_customer_interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/insurance_customer/insurance_customer_service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_order" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_order/insurance_order_interface" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_order/insurance_order_service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_user" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_user/insurance_user_interface" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_user/insurance_user_service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_userauth" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_userauth/insurance_userauth_common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/insurance_userauth/insurance_userauth_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_customer/insurance_customer_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_order/insurance_order_interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_order/insurance_order_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_user/insurance_user_interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_user/insurance_user_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_userauth/insurance_userauth_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/insurance_userauth/insurance_userauth_service/src/main/java" charset="UTF-8" />
   </component>
 </project>

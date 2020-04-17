@@ -14,9 +14,10 @@
         <module>insurance-commom</module>
         <module>insurance_customer</module>
         <module>insurance_auth</module>
+        <module>insurance_order</module>
         <module>insurance-item</module>
-        <module>insurance_order/insurance_order_interface</module>
-        <module>insurance_order/insurance_order_service</module>
+        <module>insurance_user</module>
+        <module>insurance_userauth</module>
         <module>insurance-backstagestaff</module>
     </modules>
 
