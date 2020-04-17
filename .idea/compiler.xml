@@ -7,23 +7,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="insurance-commom" />
+        <module name="insurance_userauth_service" />
         <module name="insurance_user_service" />
         <module name="insurance-item-interface" />
         <module name="insurance-gateway" />
-        <module name="insurance_user_interface" />
-        <module name="insurance_userauth_common" />
         <module name="insurance_auth_common" />
+        <module name="insurance_userauth_common" />
+        <module name="insurance-commom" />
         <module name="insurance_order_service" />
-        <module name="insurance_order_interface" />
         <module name="insurance-backstage-interface" />
         <module name="insurance-item-service" />
-        <module name="insurance_userauth_service" />
         <module name="insurance-backstage-service" />
         <module name="insurance_customer_service" />
+        <module name="insurance_auth_service" />
         <module name="insurance_customer_interface" />
         <module name="insurance-eureka" />
-        <module name="insurance_auth_service" />
+        <module name="insurance_user_interface" />
+        <module name="insurance_order_interface" />
       </profile>
     </annotationProcessing>
   </component>
