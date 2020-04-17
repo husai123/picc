@@ -17,6 +17,7 @@
         <module>insurance_order</module>
         <module>insurance-item</module>
         <module>insurance_user</module>
+        <module>insurance-backstagestaff</module>
         <module>insurance_userauth</module>
         <module>insurance-backstagestaff</module>
     </modules>

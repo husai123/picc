@@ -24,6 +24,8 @@ zuul:
     user-service:
       path: /user/**   #员工用户中心
       serviceId: user-service
+    userauth-service: /userauth/**     #员工授权中心
+
     auth-service:
       path: /auth/**
       serviceId: auth-service
@@ -39,7 +41,7 @@ zuul:
       serviceId: backstage-service
       strip-prefix: false
   prefix: /api  #所有经过网关的请求，加上前
-  add-host-header: true #经过网关调用微服务时，继续携带请求头中的域名  shopping.com
+  add-host-header: true #经过网关调用微服务时，继续携带请求头中的域名  insurance.com
   sensitive-headers: #不用指定任何内容，覆盖原有配置，表示没有敏感关键字
 ribbon:
   ReadTimeout: 10000

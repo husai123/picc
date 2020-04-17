@@ -12,13 +12,15 @@ public class UserInfo {
     public UserInfo() {
     }
 
+
     public UserInfo(Long id, String username) {
         this.id = id;
         this.username = username;
     }
 
+
     public Long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Long id) {
