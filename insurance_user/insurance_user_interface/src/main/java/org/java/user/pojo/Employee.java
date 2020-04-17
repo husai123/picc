@@ -1,4 +1,4 @@
-package org.java.customer.pojo;
+package org.java.user.pojo;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -24,8 +24,8 @@ import java.io.Serializable;
 public class Employee implements Serializable {
 
 
-     @Id
-     @KeySql(useGeneratedKeys = true)
+      @Id
+      @KeySql(useGeneratedKeys = true)
       private  Long emp_id;  //员工编号
 
       @Length(min = 2,message = "姓名的长度必须大于等于 2 位")

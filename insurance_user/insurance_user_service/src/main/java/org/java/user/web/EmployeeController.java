@@ -1,8 +1,8 @@
-package org.java.customer.web;
+package org.java.user.web;
 
 
-import org.java.customer.pojo.Employee;
-import org.java.customer.service.EmployeeService;
+import org.java.user.pojo.Employee;
+import org.java.user.servcie.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -50,7 +50,7 @@ public class EmployeeController {
      * @param employee
      * @return
      * 直接访问地址：localhost:14000/employee/register?xx=xx,请求方式为post
-     * 网关访问地址: http://api.insurance.com/api/customer/employee/register
+     * 网关访问地址: http://api.insurance.com/api/user/employee/register
      */
     @PostMapping("/register")
     public ResponseEntity<Void> registerUser(Employee employee){

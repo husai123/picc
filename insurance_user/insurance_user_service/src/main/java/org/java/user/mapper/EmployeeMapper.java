@@ -1,6 +1,7 @@
-package org.java.customer.dao;
+package org.java.user.mapper;
 
-import org.java.customer.pojo.Employee;
+
+import org.java.user.pojo.Employee;
 import tk.mybatis.mapper.common.Mapper;
 
 
