@@ -20,6 +20,8 @@
         <module>insurance-backstagestaff</module>
         <module>insurance_userauth</module>
         <module>insurance-backstagestaff</module>
+        <module>insurance_user</module>
+        <module>insurance_userauth</module>
     </modules>
 
 

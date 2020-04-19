@@ -18,6 +18,7 @@
         <module name="insurance_auth_service" />
         <module name="insurance_customer_interface" />
         <module name="insurance_customer_service" />
+        <module name="insurance_order_interface" />
         <module name="insurance_order_service" />
         <module name="insurance_user_interface" />
         <module name="insurance_user_service" />

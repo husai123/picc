@@ -105,7 +105,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         //比较用户输入的密码与数据库查询出来的密码是否一致
         //比较密码是否一致(对用户输入的密码，加盐，然后md5加密，得到一个结果，再与数据库的正确密码比较)
-        if (CodecUtils.md5Hex(password,salt).equals(user.getPassword())){
+        if (!CodecUtils.md5Hex(password,salt).equals(user.getPassword())){
             return null;//密码错误
         }
         return  user;//返回正确结果

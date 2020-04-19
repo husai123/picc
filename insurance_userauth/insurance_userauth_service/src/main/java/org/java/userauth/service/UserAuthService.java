@@ -30,8 +30,8 @@ public class UserAuthService {
         //创建一个userInfo
         UserInfo userInfo=new UserInfo();
 
-        userInfo.setId(userInfo.getId());
-        userInfo.setUsername(userInfo.getUsername());
+        userInfo.setId(employee.getEmp_id());
+        userInfo.setUsername(employee.getUsername());
 
 
         String  token;
