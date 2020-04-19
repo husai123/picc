@@ -86,6 +86,15 @@ public class EmployeeController {
 
         return ResponseEntity.ok(employee);
     }
-
-
+    //修改信息
+    @PutMapping("/updatePermissionInfo/{id}/{uname}/{phone}")
+    public ResponseEntity<Void> updatePermissionPwd(@PathVariable("id")String id,@PathVariable("uname")String uname,@PathVariable("phone")String phone){
+        employeeService.updatePermissionPwd(id,uname,phone);
+        return ResponseEntity.ok().build();
+    }
+    @PutMapping("/updatePwd/{uname}/{pwd}")
+    public ResponseEntity<Void> updatePwd(@PathVariable("uname")String uname,@PathVariable("pwd")String pwd){
+        employeeService.updatePwd(uname,pwd);
+        return ResponseEntity.ok().build();
+    }
 }

@@ -27,12 +27,5 @@ public class backUserServiceImpl implements backUserService {
         permission permission = backUserMapper.querypermissionById(per.getPermission_id());
         return permission;
     }
-    //修改信息
-    @Override
-    public void updatePermissionPwd(String id,String uname,String phone) {
-        employee backUser = backUserMapper.querybackstageById(id);
-        backUser.setPhone(phone);
-        backUser.setUsername(uname);
-        backUserMapper.updateByPrimaryKey(backUser);
-    }
+
 }

@@ -26,10 +26,5 @@ public class backUserController {
         permission permission = backUserService.querypermissionById(id);
         return ResponseEntity.status(HttpStatus.OK).body(permission);
     }
-    //修改信息
-    @PutMapping("/updatePermissionPwd/{id}/{uname}/{phone}")
-    public ResponseEntity<Void> updatePermissionPwd(@PathVariable("id")String id,@PathVariable("uname")String uname,@PathVariable("phone")String phone){
-        backUserService.updatePermissionPwd(id,uname,phone);
-        return ResponseEntity.ok().build();
-    }
+
 }

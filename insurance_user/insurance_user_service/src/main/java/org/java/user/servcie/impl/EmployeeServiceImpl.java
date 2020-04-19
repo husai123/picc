@@ -111,6 +111,26 @@ public class EmployeeServiceImpl implements EmployeeService {
         return  user;//返回正确结果
 
     }
+    //修改信息
+    @Override
+    public void updatePermissionPwd(String id,String uname,String phone) {
+        Employee backUser = employeeMapper.querybackstageById(id);
+        backUser.setPhone(phone);
+        backUser.setUsername(uname);
+        employeeMapper.updateByPrimaryKey(backUser);
+    }
+    //修改密码
+    @Override
+    public void updatePwd(String uname, String pwd) {
+        Employee employee = employeeMapper.UserbyId(uname);
+        //得到盐----------我们可以采用一个工具类生成盐
+        String salt = CodecUtils.generateSalt();
+        //对用户输入的密码进行MD5加密
+        employee.setPassword(CodecUtils.md5Hex(pwd,salt));
+        employee.setSalt(salt);
+        employeeMapper.updateByPrimaryKey(employee);
+        //将盐设置到user中
 
+    }
 
 }
