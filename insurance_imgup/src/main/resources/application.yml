@@ -2,7 +2,7 @@ server:
   port: 10020
 spring:
   application:
-    name: upload-service
+    name: imgup-service
   servlet:
     multipart:
       max-file-size: 1MB #文件上传时，单个文件，不能超过1MB

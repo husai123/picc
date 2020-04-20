@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class FileUploadApp {
+public class ImgUploadApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(FileUploadApp.class);
+        SpringApplication.run(ImgUploadApp.class);
     }
 }
