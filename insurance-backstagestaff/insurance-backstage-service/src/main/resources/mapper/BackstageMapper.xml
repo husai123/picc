@@ -17,5 +17,8 @@
         select * from permission where
         permission_id=#{id}
     </select>
+    <select id="selectone" resultType="org.java.insurance.entity.policy" >
+        SELECT EXTRACT(YEAR FROM START_TIME) AS YEAR ,EXTRACT(MONTH  FROM START_TIME) AS MONTH ,COUNT(POLICY_ID)AS cut FROM CUSTOMER_INSURANCE_POLICY GROUP BY YEAR,MONTH
+    </select>
 
 </mapper>

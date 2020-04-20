@@ -1,13 +1,12 @@
 package org.java.insurance.service.impl;
 
 import org.java.insurance.dao.backUserMapper;
-import org.java.insurance.entity.employee;
-import org.java.insurance.entity.permission;
-import org.java.insurance.entity.role_employee_relationship;
-import org.java.insurance.entity.role_permission_relationship;
+import org.java.insurance.entity.*;
 import org.java.insurance.service.backUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class backUserServiceImpl implements backUserService {
@@ -26,6 +25,12 @@ public class backUserServiceImpl implements backUserService {
         role_permission_relationship per = backUserMapper.queryrolepermissionById(emp.getRole_id());
         permission permission = backUserMapper.querypermissionById(per.getPermission_id());
         return permission;
+    }
+
+    @Override
+    public List<policy> selectone() {
+        List<policy> list = backUserMapper.selectone();
+        return list;
     }
 
 }
