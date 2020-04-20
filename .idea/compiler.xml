@@ -18,20 +18,13 @@
         <module name="insurance_auth_service" />
         <module name="insurance_customer_interface" />
         <module name="insurance_customer_service" />
-        <module name="insurance_order_interface" />
+        <module name="insurance_imgup" />
         <module name="insurance_order_service" />
-        <module name="insurance_upload" />
         <module name="insurance_user_interface" />
         <module name="insurance_user_service" />
         <module name="insurance_userauth_common" />
         <module name="insurance_userauth_service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="insurance-login" target="1.8" />
-      <module name="insurance-login-interface" target="1.8" />
-      <module name="insurance-login-service" target="1.8" />
-      <module name="insurance_order_interface" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

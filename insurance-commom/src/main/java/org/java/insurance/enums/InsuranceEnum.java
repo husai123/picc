@@ -20,6 +20,8 @@ public enum InsuranceEnum {
     //此处，相当于带参数的构造方法
     TYPE_OF_INSURANCE_LIST_No_EXISTS(404,"险种列表不存在"),
 
+    Document_LIST_NOT_FOUND(404,"单证不存在"),
+
 
 
 
