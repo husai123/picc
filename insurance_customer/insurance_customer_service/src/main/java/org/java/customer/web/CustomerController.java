@@ -88,22 +88,25 @@ public class CustomerController {
     }
 
 
-
+    //查看个人信息
     @GetMapping("/byuserId/{id}")
     public ResponseEntity<Customer> queryUserById(@PathVariable("id") String id){
         Customer cus = customerService.queryCustomerById(id);
         return ResponseEntity.status(HttpStatus.OK).body(cus);
     }
+    //修改密码
     @PutMapping("/updatePwd/{uname}/{pwd}")
     public ResponseEntity<Void> updatePwd(@PathVariable("uname")String uname,@PathVariable("pwd")String pwd){
         customerService.updatePwd(uname,pwd);
         return ResponseEntity.ok().build();
     }
+    //修改个人信息
     @PutMapping("/updateInfo/{id}/{uname}/{phone}/{email}")
     public ResponseEntity<Void> updateInfo(@PathVariable("id")String id,@PathVariable("uname")String uname,@PathVariable("phone")String phone,@PathVariable("email")String email){
         customerService.updateInfo(id,phone,email,uname);
         return ResponseEntity.ok().build();
     }
+    //修改头像
     @PutMapping("/updatePhone/{id}/{a}/{b}/{img}")
     public ResponseEntity<Void> updatePhone(@PathVariable("id")String id,@PathVariable("a")String a,@PathVariable("b")String b,@PathVariable("img")String img){
         customerService.updatePhone(id,img);
