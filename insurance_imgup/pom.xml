@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.java.insurance</groupId>
-    <artifactId>insurance_upload</artifactId>
+    <artifactId>insurance_imgup</artifactId>
     <!--导入依赖-->
     <dependencies>
         <!--导入eureka客户端的依赖-->
