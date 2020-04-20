@@ -64,7 +64,7 @@ public class CustomerServiceImpl implements CustomerService {
         System.out.println("111111111");
         //设置用户编号
         customer.setCust_id(UUID.randomUUID().toString());
-
+        customer.setCust_head_img("1.png");
         //得到盐----------我们可以采用一个工具类生成盐
         String salt = CodecUtils.generateSalt();
 
@@ -149,6 +149,13 @@ public class CustomerServiceImpl implements CustomerService {
         customer.setCust_email(email);
         customer.setCust_phone(phone);
         customer.setCust_truename(uname);
+        customerMapper.updateByPrimaryKey(customer);
+    }
+
+    @Override
+    public void updatePhone(String id, String img) {
+        Customer customer = customerMapper.queryCustomerById(id);
+        customer.setCust_head_img(img);
         customerMapper.updateByPrimaryKey(customer);
     }
 

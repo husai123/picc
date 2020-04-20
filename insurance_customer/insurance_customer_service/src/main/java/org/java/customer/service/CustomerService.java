@@ -40,4 +40,6 @@ public interface CustomerService {
     public void updatePwd(String uname,String pwd);
 
     public void updateInfo(String id, String phone, String email,String uname);
+
+    public void updatePhone(String id, String img);
 }

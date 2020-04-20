@@ -87,14 +87,12 @@ public class AuthController {
             //如果不为空，通过公钥解析数据，得到载荷信息
 
             UserInfo userInfo = JwtUtils.getInfoFromToken(token, jwtProperties.getPublicKey());
-
             //数据有效，重新设置时间
             token = JwtUtils.generateToken(userInfo, jwtProperties.getPrivateKey(), jwtProperties.getExpire());
 
             //cookie的有效时间，重新设置为30分钟
             CookieUtils.setCookie(request, response,
                     jwtProperties.getCookieName(), token, jwtProperties.getExpire() * 60);
-
             return ResponseEntity.ok(userInfo);//token有效，返回用户信息
 
         } catch (Exception e) {

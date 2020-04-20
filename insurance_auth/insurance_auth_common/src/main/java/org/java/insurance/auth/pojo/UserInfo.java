@@ -24,7 +24,7 @@ public class UserInfo {
     }
 
     public String getImg() {
-        return img;
+        return this.img;
     }
 
     public void setImg(String img) {

@@ -104,4 +104,9 @@ public class CustomerController {
         customerService.updateInfo(id,phone,email,uname);
         return ResponseEntity.ok().build();
     }
+    @PutMapping("/updatePhone/{id}/{a}/{b}/{img}")
+    public ResponseEntity<Void> updatePhone(@PathVariable("id")String id,@PathVariable("a")String a,@PathVariable("b")String b,@PathVariable("img")String img){
+        customerService.updatePhone(id,img);
+        return ResponseEntity.ok().build();
+    }
 }
