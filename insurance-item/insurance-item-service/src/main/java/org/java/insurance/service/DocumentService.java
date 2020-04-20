@@ -15,4 +15,6 @@ public interface DocumentService {
     void updateItem(Document document);
 
     void saveItem(Document document);
+
+    PageResult<Document> findByInsurance(Integer page, Integer limit, String insurance_id , String Type_id);
 }

@@ -56,4 +56,15 @@ public class Type_of_insuranceImpl implements Type_of_insuranceService {
 
         return list;
     }
+
+    @Override
+    public List<Type_of_insurance> findAll() {
+        //查询
+        List<Type_of_insurance> list = type_of_insuranceMapper.selectAll();
+        if (CollectionUtils.isEmpty(list)){
+            throw new InsuranceException(InsuranceEnum.Document_LIST_NOT_FOUND);
+        }
+
+        return list;
+    }
 }

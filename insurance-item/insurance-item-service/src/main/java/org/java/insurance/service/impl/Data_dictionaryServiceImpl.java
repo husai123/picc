@@ -1,6 +1,7 @@
 package org.java.insurance.service.impl;
 
 import org.java.insurance.entity.Data_dictionary;
+import org.java.insurance.entity.Type_of_insurance;
 import org.java.insurance.enums.InsuranceEnum;
 import org.java.insurance.exception.InsuranceException;
 import org.java.insurance.mapper.Data_dictionaryMapper;
@@ -22,6 +23,17 @@ public class Data_dictionaryServiceImpl implements Data_dictionaryService {
 
         //查询
         List<Data_dictionary> list = data_dictionaryMapper.select(data_dictionary);
+        if (CollectionUtils.isEmpty(list)){
+            throw new InsuranceException(InsuranceEnum.Document_LIST_NOT_FOUND);
+        }
+
+        return list;
+    }
+
+    @Override
+    public List<Data_dictionary> findAll() {
+        //查询
+        List<Data_dictionary> list = data_dictionaryMapper.selectAll();
         if (CollectionUtils.isEmpty(list)){
             throw new InsuranceException(InsuranceEnum.Document_LIST_NOT_FOUND);
         }
