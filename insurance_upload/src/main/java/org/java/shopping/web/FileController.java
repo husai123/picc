@@ -30,7 +30,7 @@ public class FileController {
         //获得文件名 -----a.jpg
         String fname = file.getOriginalFilename();
 
-        //获得文件的扩展名----jpg
+        //获得文件的扩展名----jpge
         String type = fname.substring(fname.lastIndexOf(".")+1);
 
         //产生一个新的文件名，目的，防止文件出现重名
