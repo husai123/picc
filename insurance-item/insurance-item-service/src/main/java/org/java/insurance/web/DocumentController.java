@@ -38,7 +38,15 @@ public class DocumentController {
 
     @GetMapping("/All")
     public ResponseEntity<PageResult<Document>> loadItem(Integer page, Integer limit){
+        System.out.println("1236666");
         PageResult<Document> pageResult=documentService.findAll(page,limit);
+        return ResponseEntity.status(HttpStatus.OK).body(pageResult);
+    }
+
+    @GetMapping("/FindByInsurance")
+    public ResponseEntity<PageResult<Document>> loadDocumentByInsurance(@RequestParam("type_id")String Type_id,@RequestParam("insurance_id")String insurance_id,Integer page, Integer limit){
+        System.out.println("666");
+        PageResult<Document> pageResult=documentService.findByInsurance(page,limit,insurance_id,Type_id);
         return ResponseEntity.status(HttpStatus.OK).body(pageResult);
     }
 
