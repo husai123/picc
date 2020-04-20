@@ -10,11 +10,7 @@ spring:
 
 ##自定义属性，用于设置文件上传时的保存路径
 file:
-  upload: C:\\j64file
-      max-file-size: 10MB #文件上传时，单个文件，不能超过1MB
-      max-request-size: 20MB #上传时，所有文件的总和，不能超过10M
-
-
+  imgup: C:\\j64file
 eureka:
   client:
     service-url:

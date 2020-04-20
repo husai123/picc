@@ -15,10 +15,10 @@ import java.io.IOException;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/upload")
+@RequestMapping("/imgup")
 public class FileController {
 
-    @Value("${file.upload}")
+    @Value("${file.imgup}")
     private String path;//该变量，用于获得文件上传的路径
 
 //    @RequestMapping("/img")
