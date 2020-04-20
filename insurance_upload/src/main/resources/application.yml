@@ -1,0 +1,18 @@
+server:
+  port: 10200
+spring:
+  application:
+    name: upload-service
+  servlet:
+    multipart:
+      max-file-size: 10MB #文件上传时，单个文件，不能超过1MB
+      max-request-size: 20MB #上传时，所有文件的总和，不能超过10M
+
+##自定义属性，用于设置文件上传时的保存路径
+file:
+  upload: D:\\insurance_project\\img
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/

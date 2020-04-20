@@ -15,15 +15,16 @@
         <module name="insurance_userauth_common" />
         <module name="insurance-commom" />
         <module name="insurance_order_service" />
-        <module name="insurance_order_interface" />
         <module name="insurance-backstage-interface" />
         <module name="insurance-item-service" />
         <module name="insurance-backstage-service" />
+        <module name="insurance_upload" />
         <module name="insurance_customer_service" />
+        <module name="insurance_auth_service" />
         <module name="insurance_customer_interface" />
         <module name="insurance-eureka" />
         <module name="insurance_user_interface" />
-        <module name="insurance_auth_service" />
+        <module name="insurance_order_interface" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -47,6 +48,7 @@
       <module name="insurance_customer_interface" options="-parameters" />
       <module name="insurance_customer_service" options="-parameters" />
       <module name="insurance_order_service" options="-parameters" />
+      <module name="insurance_upload" options="-parameters" />
       <module name="insurance_user_interface" options="-parameters" />
       <module name="insurance_user_service" options="-parameters" />
       <module name="insurance_userauth_common" options="-parameters" />
