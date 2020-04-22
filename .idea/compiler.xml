@@ -7,24 +7,54 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="insurance-backstage-interface" />
-        <module name="insurance-backstage-service" />
-        <module name="insurance-commom" />
-        <module name="insurance-eureka" />
-        <module name="insurance-gateway" />
+        <module name="insurance_userauth_service" />
+        <module name="insurance_user_service" />
         <module name="insurance-item-interface" />
-        <module name="insurance-item-service" />
+        <module name="insurance-gateway" />
         <module name="insurance_auth_common" />
+        <module name="insurance_userauth_common" />
+        <module name="insurance-commom" />
+        <module name="insurance_order_service" />
+        <module name="insurance-backstage-interface" />
+        <module name="insurance-item-service" />
+        <module name="insurance-backstage-service" />
+        <module name="insurance_customer_service" />
         <module name="insurance_auth_service" />
         <module name="insurance_customer_interface" />
-        <module name="insurance_customer_service" />
         <module name="insurance_imgup" />
-        <module name="insurance_order_service" />
+        <module name="insurance-eureka" />
         <module name="insurance_user_interface" />
-        <module name="insurance_user_service" />
-        <module name="insurance_userauth_common" />
-        <module name="insurance_userauth_service" />
+        <module name="insurance_order_interface" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="insurance-login" target="1.8" />
+      <module name="insurance-login-interface" target="1.8" />
+      <module name="insurance-login-service" target="1.8" />
+      <module name="insurance_order_interface" target="1.8" />
+      <module name="insurance_upload" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="insurance-backstage-interface" options="-parameters" />
+      <module name="insurance-backstage-service" options="-parameters" />
+      <module name="insurance-commom" options="-parameters" />
+      <module name="insurance-eureka" options="-parameters" />
+      <module name="insurance-gateway" options="-parameters" />
+      <module name="insurance-item-interface" options="-parameters" />
+      <module name="insurance-item-service" options="-parameters" />
+      <module name="insurance_auth_common" options="-parameters" />
+      <module name="insurance_auth_service" options="-parameters" />
+      <module name="insurance_customer_interface" options="-parameters" />
+      <module name="insurance_customer_service" options="-parameters" />
+      <module name="insurance_imgup" options="-parameters" />
+      <module name="insurance_order_service" options="-parameters" />
+      <module name="insurance_upload" options="-parameters" />
+      <module name="insurance_user_interface" options="-parameters" />
+      <module name="insurance_user_service" options="-parameters" />
+      <module name="insurance_userauth_common" options="-parameters" />
+      <module name="insurance_userauth_service" options="-parameters" />
+    </option>
   </component>
 </project>
