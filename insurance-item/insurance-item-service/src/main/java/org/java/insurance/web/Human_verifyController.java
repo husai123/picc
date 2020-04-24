@@ -48,6 +48,11 @@ public class Human_verifyController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
+    @GetMapping("/refuse")
+    public ResponseEntity<Void> refuseItem(@RequestParam("Human_injury_damage_id") String pid){
+        human_verifyService.refuseItem(pid);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 
 
 }

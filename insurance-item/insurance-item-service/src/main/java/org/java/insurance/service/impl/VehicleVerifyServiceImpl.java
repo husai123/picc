@@ -38,7 +38,7 @@ public class VehicleVerifyServiceImpl implements VehicleVerifyService {
         Example.Criteria criteria = example.createCriteria();
 
             //指定查询条件
-        criteria.andLessThan("opinion_material_fee",200000);
+        criteria.andGreaterThan("opinion_material_fee",200000);
         criteria.andEqualTo("instance_id",1);
         //分页查询  info对象，包含了分页的全部数据
         PageInfo info=new PageInfo(vehicleMapper.selectByExample(example));
@@ -100,5 +100,17 @@ public class VehicleVerifyServiceImpl implements VehicleVerifyService {
         if (count==0){
             throw new InsuranceException(InsuranceEnum.GOODS_UPDATE_ERROR);
         }
+    }
+
+    @Override
+    public void refuseItem(String pid) {
+        Integer id = Integer.valueOf(pid);
+        Vehicle vehicle = new Vehicle();
+        vehicle.setVehicle_damage_id(id);//设置要查询的id
+        //查询
+        List<Vehicle> list = vehicleMapper.select(vehicle);
+        Vehicle vehicle1 = list.get(0);
+        vehicle1.setInstance_id("0");
+        vehicleMapper.updateByPrimaryKey(vehicle1);
     }
 }

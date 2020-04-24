@@ -15,4 +15,6 @@ public interface Goods_verifyService {
     List<Goods_verify> findGoods_verifyByID(String Id);
 
     void updateItem(Goods_verify goods_verify);
+
+    void refuseItem(String pid);
 }

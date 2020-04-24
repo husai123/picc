@@ -15,4 +15,6 @@ public interface Human_verifyService {
     List<Human_verify> findHuman_verifyByID(String Id);
 
     void updateItem(Human_verify human_verify);
+
+    void refuseItem(String pid);
 }

@@ -17,4 +17,6 @@ public interface VehicleVerifyService {
     List<Vehicle_damage_verify> findVehicle_damage_verifyByID(String Id);
 
     void updateItem(Vehicle_damage_verify vehicle_damage_verify);
+
+    void refuseItem(String pid);
 }

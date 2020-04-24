@@ -2,10 +2,7 @@ package org.java.insurance.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import org.java.insurance.entity.Damage;
-import org.java.insurance.entity.Human_verify;
-import org.java.insurance.entity.Vehicle;
-import org.java.insurance.entity.Vehicle_damage_verify;
+import org.java.insurance.entity.*;
 import org.java.insurance.enums.InsuranceEnum;
 import org.java.insurance.exception.InsuranceException;
 import org.java.insurance.mapper.DamageMapper;
@@ -85,5 +82,17 @@ public class Human_verifyServiceImpl implements Human_verifyService {
         if (count==0){
             throw new InsuranceException(InsuranceEnum.GOODS_UPDATE_ERROR);
         }
+    }
+
+    @Override
+    public void refuseItem(String pid) {
+        Integer id = Integer.valueOf(pid);
+        Damage damage = new Damage();
+        damage.setHuman_injury_damage_id(id);//设置要查询的id
+        //查询
+        List<Damage> list = damageMapper.select(damage);
+        Damage damage1 = list.get(0);
+        damage1.setInstance_id("0");
+        damageMapper.updateByPrimaryKey(damage1);
     }
 }

@@ -46,4 +46,10 @@ public class VehicleVerifyController {
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
+    @GetMapping("/refuse")
+    public ResponseEntity<Void> refuseItem(@RequestParam("vehicle_damage_id") String pid){
+        vehicleVerifyService.refuseItem(pid);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
 }
